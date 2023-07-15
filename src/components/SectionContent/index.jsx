@@ -1,13 +1,42 @@
 import * as S from "./styles.js";
 import { Input } from "../Input";
+import { Button } from "../Button";
+import { DaysOutput } from "../DaysOutput";
+import { useDateHandler } from "../../hooks/useDateHandler.js";
 
 export const SectionContent = () => {
+  const {
+    inputValue,
+    selectedDays,
+    handleSubmit,
+    setInputValue,
+  } = useDateHandler();
+
+  console.log({
+    inputValue,
+    selectedDays
+  })
+
   return (
     <>
       <S.Title>ShowSeeker Frontend Challenge</S.Title>
-      <S.Subtitle>Solution made by Daniel Mello</S.Subtitle>
+      <S.Text>Solution made by Daniel Mello</S.Text>
       <S.Card>
-        <Input label="Insert dates" />
+        <S.Form>
+          <Input 
+            value={inputValue}
+            label="Insert dates"
+            handleSubmit={handleSubmit}
+            setInputValue={setInputValue} 
+          />
+          <Button 
+            type="submit"
+            text="Submit"
+            handleSubmit={handleSubmit}
+          />
+        </S.Form>
+
+        <DaysOutput selectedDays={selectedDays} />
       </S.Card>
     </>
   )

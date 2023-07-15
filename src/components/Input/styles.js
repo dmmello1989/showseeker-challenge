@@ -33,4 +33,8 @@ export const Input = styled.input`
     border-color: #1a7cd3;
     box-shadow: 0 0 0 rgba(27, 25, 121, 0.05);
   }
+
+  @media (max-width: 767px) {
+    padding: 8px 25px;
+  }
 `;

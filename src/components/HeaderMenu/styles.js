@@ -19,6 +19,11 @@ export const Logo = styled.img`
   display: block;
   width: 250px;
   height: 40px;
+
+  @media (max-width: 767px) {
+    width: 150px;
+    height: 24px;
+  }
 `;
 
 export const ExternalLink = styled.a`
