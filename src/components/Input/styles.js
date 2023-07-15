@@ -3,10 +3,28 @@ import styled from "styled-components";
 export const InputWrapper = styled.div`
 `;
 
+export const TopWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 0 16px 8px;
+`;
+
+export const TooltipWrapper = styled.div`
+  position: relative;
+`;
+
+export const Icon = styled.img`
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-left: 24px;
+  cursor: pointer;
+`;
+
 export const Label = styled.label`
   display: block;
-  margin: 0 0 16px 8px;
   font-weight: 700;
+  font-size: 27px;
 `;
 
 export const Input = styled.input`

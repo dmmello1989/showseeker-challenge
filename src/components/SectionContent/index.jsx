@@ -20,7 +20,7 @@ export const SectionContent = () => {
   return (
     <>
       <S.Title>ShowSeeker Frontend Challenge</S.Title>
-      <S.Text>Solution made by Daniel Mello</S.Text>
+      <S.Text>Solution by Daniel Mello</S.Text>
       <S.Card>
         <S.Form>
           <Input 

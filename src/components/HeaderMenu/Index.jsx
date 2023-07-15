@@ -11,12 +11,12 @@ export const HeaderMenu = () => {
         >
           <S.Logo src={Logo} alt="ShowSeeker" />
         </S.ExternalLink>
-        <S.ExternalLink
+        {/* <S.ExternalLink
           target="_blank"
           href="https://github.com/dmmello1989"
         >
           Made by Daniel
-        </S.ExternalLink>
+        </S.ExternalLink> */}
       </S.Container>
     </S.Header>
   )

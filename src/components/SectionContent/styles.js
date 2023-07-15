@@ -29,7 +29,7 @@ export const Card = styled.div`
   align-items: flex-end;
   justify-content: space-between;
   margin-top: 64px;
-  padding: 64px 42px;
+  padding: 42px;
   border-radius: 20px;
   border: 1px solid #eff0f6;
   background-color: #ffffff;
