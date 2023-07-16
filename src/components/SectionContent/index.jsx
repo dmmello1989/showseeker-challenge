@@ -12,11 +12,6 @@ export const SectionContent = () => {
     setInputValue,
   } = useDateHandler();
 
-  console.log({
-    inputValue,
-    selectedDays
-  })
-
   return (
     <>
       <S.Title>ShowSeeker Frontend Challenge</S.Title>

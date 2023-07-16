@@ -6,13 +6,14 @@ export const Tooltip = styled.div`
   width: 316px;
   padding: 16px;
   font-size: 12px;
-  background-color: #fff;
+  color: ${props => props.theme.darkBlue};
+  background-color: ${props => props.theme.white};
   border: 1px solid #000;
   border-radius: 20px;
   box-shadow: 3px 3px 12px rgba(0,0,0,0.15);
   opacity: 0;
   visibility: hidden;
-  transition: opacity .3s, visibility .3s;
+  transition: all .3s;
   z-index: 3;
 
   ${props => props.isActive && `

@@ -28,6 +28,8 @@ export const Label = styled.label`
   display: block;
   font-weight: 700;
   font-size: 27px;
+  color: ${props => props.theme.darkText};
+  transition: color .3s;
 
   @media (max-width: 767px) {
     font-size: 22px;
@@ -38,9 +40,9 @@ export const Input = styled.input`
   width: 100%;
   min-height: 73px;
   padding: 8px 32px;
-  color: #0b0a33;
-  background-color: #fff;
-  border: 1px solid #eff0f6;
+  color: ${props => props.theme.darkText};
+  background-color: ${props => props.theme.white};
+  border: 1px solid ${props => props.theme.border};
   border-radius: 64px;
   font-size: 18px;
   font-weight: 500;
@@ -50,13 +52,13 @@ export const Input = styled.input`
   transition: all .3s;
   
   &:focus-visible {
-    outline: 1px solid #1a7cd3;
+    outline: 1px solid ${props => props.theme.lightBlue};
   }
 
   &:focus,
   &:hover {
-    color: #0b0a33;
-    border-color: #1a7cd3;
+    color: ${props => props.theme.darkText};
+    border-color: ${props => props.theme.lightBlue};
     box-shadow: 0 0 0 rgba(27, 25, 121, 0.05);
   }
 

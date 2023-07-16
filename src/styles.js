@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Main = styled.div`
   min-width: 100dvw;
   min-height: 100dvh;
-  background-color: #F2FBFF;
+  background-color: ${props => props.theme.body};
+  transition: background-color .3s;
 
   @media (max-width: 767px) {
     padding-bottom: 28px;

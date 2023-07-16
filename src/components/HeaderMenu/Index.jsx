@@ -1,7 +1,11 @@
-import Logo from "../../assets/logo.svg";
+import { useContext } from "react";
+import { ThemeContext } from "styled-components";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 import * as S from "./styles";
 
-export const HeaderMenu = () => {
+export const HeaderMenu = ({ toggleTheme }) => {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <S.Header>
       <S.Container>
@@ -9,8 +13,10 @@ export const HeaderMenu = () => {
           target="_blank"
           href="https://www.showseeker.com"
         >
-          <S.Logo src={Logo} alt="ShowSeeker" />
+          <S.Logo src={themeContext.logo} alt="ShowSeeker" />
         </S.ExternalLink>
+
+        <ThemeSwitcher toggleTheme={toggleTheme} />
         {/* <S.ExternalLink
           target="_blank"
           href="https://github.com/dmmello1989"

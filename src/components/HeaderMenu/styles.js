@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   padding: 20px 20px 29px;
-  background-color: #f0fbfe;
+  background-color: ${props => props.theme.body};
+  transition: background-color .3s;
 `;
 
 export const Container = styled.div`
@@ -28,7 +29,7 @@ export const Logo = styled.img`
 
 export const ExternalLink = styled.a`
   display: block;
-  color: #0b0a33;
+  color: ${props => props.theme.darkBlue};
   line-height: 1.125rem;
   text-decoration: none;
   letter-spacing: -.01em;
@@ -36,7 +37,7 @@ export const ExternalLink = styled.a`
   font: 500 18px "Thicccboi";
 
   &:hover {
-    color: #1a7cd3;
+    color: ${props => props.theme.lightBlue};
   }
 `;
 

@@ -10,6 +10,8 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h2`
   margin-bottom: 24px;
+  color: ${props => props.theme.darkText};
+  transition: color .3s;
 
   @media (max-width: 767px) {
     margin-left: 8px;
@@ -33,7 +35,8 @@ export const NumbersWrapper = styled.div`
 
 export const Error = styled.h2`
   margin: 0 0 0 8px;
-  color: #db001b;
+  color: ${props => props.theme.errorRed};
+  transition: color .3s;
 `;
 
 export const Number = styled.div`
@@ -46,9 +49,10 @@ export const Number = styled.div`
   font-size: 24px;
   font-weight: 700;
   line-height: 1.111em;
-  color: #ffffff;
+  color: ${props => props.theme.white};
   border-radius: 50%;
-  background-color: #0b0a33;
+  background-color: ${props => props.theme.darkBlue};
+  transition: background-color .3s;
   pointer-events: none;
 
   @media (max-width: 767px) {
