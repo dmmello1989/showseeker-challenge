@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const InputWrapper = styled.div`
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 export const TopWrapper = styled.div`
@@ -25,9 +28,14 @@ export const Label = styled.label`
   display: block;
   font-weight: 700;
   font-size: 27px;
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
 `;
 
 export const Input = styled.input`
+  width: 100%;
   min-height: 73px;
   padding: 8px 32px;
   color: #0b0a33;

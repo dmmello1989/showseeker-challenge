@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const Tooltip = styled.div`
   position: absolute;
   bottom: 30px;
-  /* display: none; */
-  /* height: 0; */
   width: 316px;
   padding: 16px;
   font-size: 12px;
@@ -24,4 +22,8 @@ export const Tooltip = styled.div`
     visibility: visible;
     transition: opacity .6s, visibility 3s;
   `};
+
+  @media (max-width: 767px) {
+    left: -130px;
+  }
 `;

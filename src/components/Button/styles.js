@@ -21,4 +21,9 @@ export const Button = styled.button`
     background-color: #0b0a33;
     transform: scale3d(.95, .95, 1.01);
   }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin: 16px auto;
+  }
 `;

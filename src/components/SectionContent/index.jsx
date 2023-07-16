@@ -25,7 +25,7 @@ export const SectionContent = () => {
         <S.Form>
           <Input 
             value={inputValue}
-            label="Insert dates"
+            label="Insert days"
             handleSubmit={handleSubmit}
             setInputValue={setInputValue} 
           />

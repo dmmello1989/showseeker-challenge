@@ -36,7 +36,10 @@ export const Card = styled.div`
   box-shadow: 0 6px 12px rgba(20, 20, 42, 0.04);
 
   @media (max-width: 767px) {
-    margin: 32px 16px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 355px;
+    margin: 32px auto;
     padding: 40px 25px;
   }
 `;
@@ -44,4 +47,10 @@ export const Card = styled.div`
 export const Form = styled.form`
   display: flex;
   align-items: flex-end;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 `;

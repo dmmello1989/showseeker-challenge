@@ -4,6 +4,10 @@ export const Main = styled.div`
   min-width: 100dvw;
   min-height: 100dvh;
   background-color: #F2FBFF;
+
+  @media (max-width: 767px) {
+    padding-bottom: 28px;
+  }
 `;
 
 export const Container = styled.div`

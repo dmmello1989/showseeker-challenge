@@ -3,7 +3,7 @@ import { Tooltip } from "../Tooltip";
 import TooltipIcon from "../../assets/tooltip.svg";
 import * as S from "./styles";
 
-const tooltipText = `Accepted date formats:<br/><br/>
+const tooltipText = `Accepted day formats:<br/><br/>
   <strong>Single letters</strong>: m, t, w, th, f, s, su<br/>
   <strong>Abbreviations</strong>: mon, tue, wed, thu, fri, sat, sun<br/>
   <strong>Full day names</strong>: monday, tuesday, wednesday, etc.`;

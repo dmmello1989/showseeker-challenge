@@ -9,9 +9,11 @@ export const DaysOutput = ({ selectedDays }) => {
       <S.NumbersWrapper>
         {orderedNumbers.length === 0 ?
           <S.Placeholder />
-        : orderedNumbers.map(number => (
-          <S.Number key={`selected-day-${number}`}>{number}</S.Number>
-        ))}
+        : orderedNumbers.map(number => {
+          const isInvalid = number === 0;
+
+          return isInvalid ? <S.Error>Invalid date</S.Error> : <S.Number key={`selected-day-${number}`}>{number}</S.Number>
+        })}
       </S.NumbersWrapper>
     </S.Wrapper>
   )
