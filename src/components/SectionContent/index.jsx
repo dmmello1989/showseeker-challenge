@@ -14,7 +14,7 @@ export const SectionContent = () => {
 
   return (
     <>
-      <S.Title>ShowSeeker Frontend Challenge</S.Title>
+      <S.Title>ShowSeeker Frontend Code Challenge</S.Title>
       <S.Text>
         Solution by {" "}
         <S.ExternalLink

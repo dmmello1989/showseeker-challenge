@@ -19,5 +19,6 @@ export const Container = styled.div`
   
   .Toastify__toast-body {
     font-size: 15px;
+    text-align: center;
   }
 `;

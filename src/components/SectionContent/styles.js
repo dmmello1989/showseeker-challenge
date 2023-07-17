@@ -9,6 +9,8 @@ export const Title = styled.h1`
   transition: color .3s;
 
   @media (max-width: 767px) {
+    max-width: 350px;
+    margin: 18px auto;
     font-size: 28px;
   }
 `;

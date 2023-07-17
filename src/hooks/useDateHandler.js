@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { toast } from "react-toastify";
 
 export const useDateHandler = () => {
   const [inputValue, setInputValue] = useState('');
@@ -29,10 +28,14 @@ export const useDateHandler = () => {
         const lastDay = convertDayToNumber(consecutiveDays[1].trim());
 
         if (firstDay > lastDay) {
-          return toast.warn("The range of days should start with the lower day and end with the higher day", {
-            position: toast.POSITION.TOP_CENTER,
-            theme: "colored",
-          });
+           // Add numbers from firstDay to 7
+          for (let number = firstDay; number <= 7; number++) {
+            tempSelectedDays.add(number);
+          }
+          // Add numbers from 1 to lastDay
+          for (let number = 1; number <= lastDay; number++) {
+            tempSelectedDays.add(number);
+          }
         }
 
         // Use firstDay and lastDay in a loop to add number into the temporary array
