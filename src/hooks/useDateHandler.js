@@ -27,6 +27,10 @@ export const useDateHandler = () => {
         // Get the number corresponding to the last day of the consecutive days
         const lastDay = convertDayToNumber(consecutiveDays[1].trim());
 
+        if (firstDay === 0 || lastDay === 0) {
+          return tempSelectedDays.add(0);
+        }
+
         if (firstDay > lastDay) {
            // Add numbers from firstDay to 7
           for (let number = firstDay; number <= 7; number++) {
@@ -86,6 +90,11 @@ export const useDateHandler = () => {
         return 0;
     }
   };
+
+  console.log({
+    inputValue,
+    selectedDays
+  })
 
   return {
     inputValue,
