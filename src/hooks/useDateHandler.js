@@ -91,11 +91,6 @@ export const useDateHandler = () => {
     }
   };
 
-  console.log({
-    inputValue,
-    selectedDays
-  })
-
   return {
     inputValue,
     selectedDays,
