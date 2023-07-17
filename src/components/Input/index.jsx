@@ -18,7 +18,7 @@ export const Input = ({
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      handleSubmit();
+      handleSubmit(e);
     }
   };
 

@@ -13,6 +13,7 @@ export const useDateHandler = () => {
 
     // Format the input value to lowercase and convert it into an array
     const daysArray = inputValue.toLowerCase().split(',');
+    // Temporary Set to prevent repeated numbers
     const tempSelectedDays = new Set;
 
     daysArray.forEach(day => {
@@ -23,9 +24,9 @@ export const useDateHandler = () => {
         // Convert consecutive days into an array
         const consecutiveDays = trimDay.split('-');
         // Get the number corresponding to the first day of the consecutive days 
-        const firstDay = convertDayToNumber(consecutiveDays[0]);
+        const firstDay = convertDayToNumber(consecutiveDays[0].trim());
         // Get the number corresponding to the last day of the consecutive days
-        const lastDay = convertDayToNumber(consecutiveDays[1]);
+        const lastDay = convertDayToNumber(consecutiveDays[1].trim());
 
         if (firstDay > lastDay) {
           return toast.warn("The range of days should start with the lower day and end with the higher day", {
@@ -44,6 +45,7 @@ export const useDateHandler = () => {
       }
     });
 
+    // Create array from temporary Set and update selectedDays state
     setSelectedDays(Array.from(tempSelectedDays));
   };
 
