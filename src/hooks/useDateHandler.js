@@ -5,12 +5,10 @@ export const useDateHandler = () => {
   const [inputValue, setInputValue] = useState('');
   const [selectedDays, setSelectedDays] = useState([]);
 
-  console.log(selectedDays)
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue == "") {
-      return;
+      return setSelectedDays([]);
     }
 
     // Format the input value to lowercase and convert it into an array

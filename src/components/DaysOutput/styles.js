@@ -31,7 +31,8 @@ export const Title = styled.h2`
 `;
 
 export const Placeholder = styled.div`
-  
+  font-size: 22px;
+  color: ${props => props.theme.lightGrey};
 `;
 
 export const NumbersWrapper = styled.div`
