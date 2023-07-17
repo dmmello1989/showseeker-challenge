@@ -2,7 +2,7 @@
 
 This is my submission for the challenge to the position of Frontend Developer at ShowSeeker. This project implements a feature that allows users to specify the days of the week in text format, returning numbers to represent the days. The project is built using React and styled-components.
 
-![ShowSeeker Code Challenge](https://github.com/dmmello1989/showseeker-challenge/assets/39010449/000ec794-fc6d-4369-84a2-a0c0c560b623)
+![ShowSeeker Code Challenge](https://github.com/dmmello1989/showseeker-challenge/assets/39010449/aed22992-6bbb-4ca4-b008-0d7659086a3d)
 
 # Challenge Scope
 
