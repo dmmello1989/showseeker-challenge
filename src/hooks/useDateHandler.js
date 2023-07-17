@@ -1,14 +1,21 @@
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export const useDateHandler = () => {
   const [inputValue, setInputValue] = useState('');
   const [selectedDays, setSelectedDays] = useState([]);
 
+  console.log(selectedDays)
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (inputValue == "") {
+      return;
+    }
+
     // Format the input value to lowercase and convert it into an array
     const daysArray = inputValue.toLowerCase().split(',');
-    const tempSelectedDays = [];
+    const tempSelectedDays = new Set;
 
     daysArray.forEach(day => {
       // Get rid of unwanted spaces
@@ -22,17 +29,24 @@ export const useDateHandler = () => {
         // Get the number corresponding to the last day of the consecutive days
         const lastDay = convertDayToNumber(consecutiveDays[1]);
 
+        if (firstDay > lastDay) {
+          return toast.warn("The range of days should start with the lower day and end with the higher day", {
+            position: toast.POSITION.TOP_CENTER,
+            theme: "colored",
+          });
+        }
+
         // Use firstDay and lastDay in a loop to add number into the temporary array
         for (let number = firstDay; number <= lastDay; number++) {
-          tempSelectedDays.push(number);
+          tempSelectedDays.add(number);
         }
       } else {
         // If the day is just a string, convert it to it's corresponding number and push it into the temporary array
-        tempSelectedDays.push(convertDayToNumber(trimDay));
+        tempSelectedDays.add(convertDayToNumber(trimDay));
       }
     });
 
-    setSelectedDays(tempSelectedDays);
+    setSelectedDays(Array.from(tempSelectedDays));
   };
 
   const convertDayToNumber = (day) => {

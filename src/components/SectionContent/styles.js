@@ -26,6 +26,20 @@ export const Text = styled.p`
   }
 `;
 
+export const ExternalLink = styled.a`
+  display: inline-block;
+  color: ${props => props.theme.darkBlue};
+  line-height: 1.125rem;
+  text-decoration: none;
+  letter-spacing: -.01em;
+  transition: color .3s;
+  font: 500 18px "Thicccboi";
+
+  &:hover {
+    color: ${props => props.theme.lightBlue};
+  }
+`;
+
 export const Card = styled.div`
   display: flex;
   align-items: flex-end;

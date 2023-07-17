@@ -15,7 +15,15 @@ export const SectionContent = () => {
   return (
     <>
       <S.Title>ShowSeeker Frontend Challenge</S.Title>
-      <S.Text>Solution by Daniel Mello</S.Text>
+      <S.Text>
+        Solution by {" "}
+        <S.ExternalLink
+          target="_blank"
+          href="https://github.com/dmmello1989"
+        >
+          Daniel Mello
+        </S.ExternalLink>
+      </S.Text>
       <S.Card>
         <S.Form>
           <Input 

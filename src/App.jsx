@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "styled-components";
+import 'react-toastify/dist/ReactToastify.css';
 
 import { HeaderMenu } from "./components/HeaderMenu/Index";
 import { SectionContent } from "./components/SectionContent";
@@ -21,6 +23,7 @@ const App = () => {
         <HeaderMenu toggleTheme={toggleTheme} />
         <S.Container>
           <SectionContent />
+          <ToastContainer />
         </S.Container>
       </S.Main>
     </ThemeProvider>

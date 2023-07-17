@@ -6,7 +6,7 @@ export const Tooltip = styled.div`
   width: 316px;
   padding: 16px;
   font-size: 12px;
-  color: ${props => props.theme.darkBlue};
+  color: ${props => props.theme.darkText};
   background-color: ${props => props.theme.white};
   border: 1px solid #000;
   border-radius: 20px;

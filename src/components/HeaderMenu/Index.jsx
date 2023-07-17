@@ -17,12 +17,6 @@ export const HeaderMenu = ({ toggleTheme }) => {
         </S.ExternalLink>
 
         <ThemeSwitcher toggleTheme={toggleTheme} />
-        {/* <S.ExternalLink
-          target="_blank"
-          href="https://github.com/dmmello1989"
-        >
-          Made by Daniel
-        </S.ExternalLink> */}
       </S.Container>
     </S.Header>
   )

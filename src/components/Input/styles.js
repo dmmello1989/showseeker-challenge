@@ -63,6 +63,7 @@ export const Input = styled.input`
   }
 
   @media (max-width: 767px) {
+    min-height: 60px;
     padding: 8px 25px;
   }
 `;

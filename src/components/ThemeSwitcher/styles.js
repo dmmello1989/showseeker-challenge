@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: fit-content;
+`;
+
+export const Image = styled.img`
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 12px;
+`;
+
 export const Input = styled.input`
   width: 0;
   height: 0;
@@ -20,6 +33,7 @@ export const Label = styled.label`
   margin-left: auto;
   border-radius: 100px;
   background-color: ${props => props.theme.switcher};
+  box-shadow: 0 6px 12px rgba(20, 20, 42, 0.04);
   cursor: pointer;
 
   &:after {

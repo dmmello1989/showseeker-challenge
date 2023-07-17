@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
 export const Wrapper = styled.div`
   width: 376px;
@@ -25,6 +36,7 @@ export const Placeholder = styled.div`
 
 export const NumbersWrapper = styled.div`
   display: flex;
+  align-items: center;
   gap: 0 16px;
   height: 73px;
 
@@ -54,6 +66,8 @@ export const Number = styled.div`
   background-color: ${props => props.theme.darkBlue};
   transition: background-color .3s;
   pointer-events: none;
+  opacity: 0;
+  animation: ${({ show, index }) => show && css`${fadeIn} 0.5s ease-out ${index * 0.1}s forwards`};
 
   @media (max-width: 767px) {
     width: 30px;
