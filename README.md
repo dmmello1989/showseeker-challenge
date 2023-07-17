@@ -1,5 +1,5 @@
 # ShowSeeker Frontend Developer Challenge
-Welcome to my submission for the ShowSeeker Frontend Developer Challenge. This project implements a feature that allows users to specify the days of the week in text format, returning numbers to represent the days. The project is built using React and styled-components.
+This is my submission for the challenge to the position of Frontend Developer at ShowSeeker. This project implements a feature that allows users to specify the days of the week in text format, returning numbers to represent the days. The project is built using React and styled-components.
 
 # Challenge Scope
 The function implemented in this project should be able to handle the following requirements:
@@ -25,7 +25,8 @@ To input the desired days, follow the formats mentioned above:
 - Separate individual days with commas.
 - Use dashes to specify consecutive day ranges.
 - Combine dashes and commas as needed.
-- The numbers representing the days of the week will be returned, where Sunday is represented by 1 and Saturday by 7.
+- The numbers representing the days of the week will be returned in order from lowest to highest, where Sunday is represented by 1 and Saturday by 7.
+- Only one number will be shown if repeated days are submitted.
 
 # Error Handling
 Invalid input formats will prompt an error message, ensuring that users are notified of any mistakes or inconsistencies in their input.
